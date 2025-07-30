@@ -1,0 +1,25 @@
+.navbar{
+  position: fixed;
+  display: flex;
+  width: 100%;
+  padding: 10px 10%;
+  height: 50px;
+  
+ 
+}
+
+
+.navbar ul{
+  background-color: blue;
+  padding: 10px 30px;
+  border-radius: 100px;
+  margin: auto;
+  display: flex;
+  list-style: none;
+  gap: 80px;
+}
+
+.navbar ul li{
+  font-size: 20px;
+  cursor: pointer;
+}
