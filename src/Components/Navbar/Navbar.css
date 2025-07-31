@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  padding: 35px 10%;
+  padding: 30px 10%;
   height: 50px;
   border-bottom: 1px solid #444;
   
@@ -31,3 +31,5 @@
   font-size: 20px;
   cursor: pointer;
 }
+
+

@@ -1,9 +1,12 @@
 .hero{
+  background: linear-gradient(125deg, rgba(27, 27, 27, 1), rgba(0, 49, 83, 1));
+  -webkit-background: linear-gradient(125deg, rgba(27, 27, 27, 1), rgba(0, 49, 83, 1));
+  -moz-background: linear-gradient(125deg, rgba(27, 27, 27, 1), rgba(0, 49, 83, 1));
   display: flex;
   align-items: center;
   width: 100%;
   height: 100vh;
-  padding: 0 10%;
+  padding: 5% 10%;
 
 }
 
@@ -18,11 +21,6 @@
   flex-basis: 48%;
 }
 
-.hero-right{
-  flex-basis: 48%;
-}
-
-
 .hero-left h2{
   font-size: 2.5rem;
 }
@@ -33,28 +31,143 @@
 
 .hero-left p{
   font-size: 1.5rem;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 
-@media screen and (max-width: 768px) {
+.hero-socials{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+
+.hero-socials span{
+  font-size: 1.2rem;
+}
+
+.social-icons{
+  display: flex;
+  gap: 10px;
+}
+
+.hero-socials a{
+  border: 2px solid #ffff;
+  border-radius: 50%;
+  padding: 5px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out; 
+  color: #ffff;
+}
+
+.hero-socials a:hover{
+  color: #000000;
+  background: #fff;
+}
+
+.hero-buttons{
+  margin-top:25px;
+  display:flex;
+  gap: 20px; 
+}
+
+.hero-buttons a{
+  padding: 10px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  color: #fff;
+  background-color: #007bff;
+  transition: background-color 0.3s ease;
+  
+}
+
+
+.hero-right{
+  flex-basis: 48%;
+  display: flex;
+  justify-content: center;
+  
+}
+
+.hero-right img{
+  width: 100%;
+  max-width:50%;
+  background-size: cover;
+  mask-size: center;
+  border-radius: 30px;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.hero-right img:hover{
+  transform: scale(1.06);
+  
+}
+
+
+@media screen and (max-width: 1200px) {
+  .hero-right img{
+    max-width:70%;
+  }
+}
+
+@media screen and (max-width: 800px) {
   .hero{
-    padding: 120px 5% 0px 5%;
+    height: 60vh;
+    padding: 50px 5% 0px 5%;
   }
   
   .hero-content{
     flex-direction: column;
     align-items: center;
   }
+
+  .hero-left h2{
+    font-size: 2rem;
+  }
+
+  .hero-left h1{
+    font-size: 2.5rem;
+  }
+  
+  .hero-left p{
+    font-size: 1.2rem;
+    margin-top: 10px;
+  }
+
   
   .hero-left, .hero-right{
     flex-basis: 100%;
     margin-bottom: 20px;
   }
+
+  .hero-socials{
+    align-items: center;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+  
+  .hero-socials a{
+    margin: 0;
+    padding: 5px;
+    font-size: 1rem;
+  }
+
+  .hero-buttons{
+    justify-content: center;
+    gap: 10px; 
+  }
+
+ 
   
   .hero-left h2, .hero-left h1, .hero-left p{
     text-align: center;
   }
-  
+
+  .hero-right{
+    display: none;
+  }
 }
 
