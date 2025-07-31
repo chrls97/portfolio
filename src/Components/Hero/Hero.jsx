@@ -1,25 +1,52 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './Hero.css'
-import hero from '../../assets/hero.jpg'
+import charles from '../../assets/charles.jpg'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
+import Aos from 'aos'
+import 'aos/dist/aos.css'
+import TextType  from '../Animation/TextType';  
+
+
 const Hero = () => {
+  // Initialize AOS for animations
+  useEffect(() => {
+    Aos.init();
+  },[])
   return (
     <div className='hero'>
       <div className='hero-content'>
-        <div className='hero-left'>
+        <div className='hero-left' data-aos="fade-right" data-aos-duration="1500">
           <h2>Hi!,</h2>
           <h1>I'm CHARLES LENNARD C. AMON</h1>
-          <h2>Fullstack Developer</h2>
+          <h2>
+            <TextType 
+              text={["Fullstack Developer", "Frontend Developer", "Backend Developer"]}
+              typingSpeed={75}
+              pauseDuration={1500}
+              showCursor={true}
+              cursorCharacter="|"
+            />
+          </h2>
           <p>I handle the development, deployment and maintenance of your Website or Web Application, start to finish.</p>
 
-          <div>
-            <span>Follow / Contact me @</span>
-            <i>LinkedIn</i> <i>GitHub</i> <i>Indeed</i><br />
+          <div className='hero-socials'>
+            <span>Follow me on:</span>
+            <div className='social-icons'>
+              <a href='https://github.com/chrls97' target='_blank'><FontAwesomeIcon icon={faGithub} /></a>
+              <a href='https://www.linkedin.com/in/charles-lennard-amon-533715169/' target='_blank' className='linkedin'><FontAwesomeIcon icon={faLinkedinIn} /></a>
+            </div>
+          </div>
+
+          <div className='hero-buttons'>
+            <a href='https://drive.google.com/file/d/1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6q/view?usp=sharing' target='_blank' className='btn'>Download CV</a>
+            <a href='#contact' className='btn btn-primary'>Contact Me</a>
           </div>
           
-          <button>Check my Portfolio</button><button>Download Resume</button>
+          
         </div>
-        <div className='hero-right'>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo quasi quae nisi sequi earum, animi eius quidem fugit quia laboriosam, similique in velit iusto error eveniet sapiente quas quisquam dolorum.
+        <div className='hero-right' data-aos="fade-left" data-aos-duration="1500">
+          <img src={charles} alt="" />
         </div>
       </div>
     </div>
