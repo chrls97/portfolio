@@ -6,7 +6,9 @@
   width: 100%;
   padding: 30px 10%;
   height: 50px;
-  border-bottom: 1px solid #444;
+  z-index: 5;
+  background-color: rgb(36, 35, 35);
+
   
 }
 

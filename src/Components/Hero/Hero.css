@@ -1,7 +1,4 @@
-.hero{
-  background: linear-gradient(125deg, rgba(27, 27, 27, 1), rgba(0, 49, 83, 1));
-  -webkit-background: linear-gradient(125deg, rgba(27, 27, 27, 1), rgba(0, 49, 83, 1));
-  -moz-background: linear-gradient(125deg, rgba(27, 27, 27, 1), rgba(0, 49, 83, 1));
+#hero{
   display: flex;
   align-items: center;
   width: 100%;
@@ -18,15 +15,15 @@
 }
 
 .hero-left{
-  flex-basis: 48%;
+  flex-basis: 60%;
 }
 
 .hero-left h2{
-  font-size: 2.5rem;
+  font-size: 3.5rem;
 }
 
 .hero-left h1{
-  font-size: 3.5rem;
+  font-size: 4rem;
 }
 
 .hero-left p{
@@ -44,7 +41,7 @@
 }
 
 .hero-socials span{
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 }
 
 .social-icons{
@@ -85,7 +82,7 @@
 
 
 .hero-right{
-  flex-basis: 48%;
+  flex-basis: 35%;
   display: flex;
   justify-content: center;
   
@@ -93,7 +90,7 @@
 
 .hero-right img{
   width: 100%;
-  max-width:50%;
+  max-width:85%;
   background-size: cover;
   mask-size: center;
   border-radius: 30px;
@@ -109,12 +106,12 @@
 
 @media screen and (max-width: 1200px) {
   .hero-right img{
-    max-width:70%;
+    max-width:100%;
   }
 }
 
 @media screen and (max-width: 800px) {
-  .hero{
+  #hero{
     height: 60vh;
     padding: 50px 5% 0px 5%;
   }
