@@ -14,7 +14,7 @@ const Hero = () => {
     Aos.init();
   },[])
   return (
-    <div className='hero'>
+    <div id='hero'>
       <div className='hero-content'>
         <div className='hero-left' data-aos="fade-right" data-aos-duration="1500">
           <h2>Hi!,</h2>
