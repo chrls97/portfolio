@@ -5,6 +5,13 @@
   padding:5% 10%;
 }
 
+#aboutme .title{
+  font-size: 3.5rem;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 50px;
+} 
+
 .aboutme-content{
   display: flex;
   flex-direction: column;
@@ -77,12 +84,13 @@
   width: 100%;
   align-items: center;
   text-align: center;
+  margin-top: 30px;
   
 }
 
 .stack{
   flex-basis: 32%;
-  padding: 20px;
+  padding: 35px;
   border-radius: 10px;
   background-color: rgba(244, 246, 247, 0.062);
   box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
@@ -95,6 +103,7 @@
 }
 
 .icons-container{
+ 
   display: flex;
   justify-content: center;
   text-align: center;
