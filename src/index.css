@@ -14,5 +14,7 @@ body{
   font-family: "Outfit";
 }
 
-
-
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 70px; /* adjust based on your navbar height */
+}
