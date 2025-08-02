@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import './AboutMe.css'
 import Aos from 'aos'
 import 'aos/dist/aos.css'
+import CountUp from '../../Animation/CountUp';
 import charles from '../../assets/charles.jpg'
 
 import html from '../../Assets/stack_icons/html.png'
@@ -25,29 +26,43 @@ import photoshop from '../../Assets/stack_icons/photoshop.png'
 
 const AboutMe = () => {
 
-  const frontStacks = [
-    { name: 'HTML', icon: html},
-    { name: 'CSS', icon: css},
-    { name: 'JavaScript', icon: js},
-    { name: 'React', icon: react},
-    { name: 'Bootstrap', icon: bootstrap},
-    { name: 'Tailwind', icon: tailwind}];
+  const techStacks = [
+    {
+      stack: 'frontend',
+      languages: [
+        { name: 'HTML', icon: html},
+        { name: 'CSS', icon: css},
+        { name: 'JavaScript', icon: js},
+        { name: 'React', icon: react},
+        { name: 'Bootstrap', icon: bootstrap},
+        { name: 'Tailwind', icon: tailwind}
+      ]
+    },{
+      stack: 'backend',
+      languages: [
+        { name: 'PHP', icon: php},
+        { name: 'Laravel', icon: laravel},
+        { name: 'NodeJs', icon: nodejs},
+        { name: 'ExpressJs', icon: expressjs},
+        { name: 'mySql', icon: mysql},
+        { name: 'MongoDB', icon: mongodb}
+      ]
+    },{
+      stack: 'tools',
+      languages: [
+        { name: 'VS Code', icon: vscode},
+        { name: 'Git', icon: git},
+        { name: 'Github', icon: github},
+        { name: 'Postman', icon: postman},
+        { name: 'NPM', icon: npm},
+        { name: 'Photoshop', icon: photoshop}
+      ]
+    }
+  ];
 
-  const backendStack = [
-    { name: 'PHP', icon: php},
-    { name: 'Laravel', icon: laravel},
-    { name: 'NodeJs', icon: nodejs},
-    { name: 'ExpressJs', icon: expressjs},
-    { name: 'mySql', icon: mysql},
-    { name: 'MongoDB', icon: mongodb}]
-
-  const otherStack = [
-    { name: 'VS Code', icon: vscode},
-    { name: 'Git', icon: git},
-    { name: 'Github', icon: github},
-    { name: 'Postman', icon: postman},
-    { name: 'NPM', icon: npm},
-    { name: 'Photoshop', icon: photoshop}]
+    const portfolio = [
+      { project: 'Database management', images: ['https://i.imgur.com/1a2b3c4.png', 'https://i.imgur.com/5d6e7f8.png'], description: 'A web application for managing databases.' },
+      { project: 'E-commerce platform', images: ['https://i.imgur.com/9a0b1c2.png', 'https://i.imgur.com/3d4e5f6.png'], description: 'An online store with a user-friendly interface.' }]
 
 
     useEffect(() => {
@@ -80,17 +95,37 @@ const AboutMe = () => {
 
             <div className='aboutme-achievements'>
               <div className='aboutme-achievement'>
-                <h1>6+</h1>
+                <h1>
+                  <CountUp from={0}
+                    to={6}
+                    separator=","
+                    direction="up"
+                    duration={0.5}
+                    className="count-up-text"
+                  />+
+                </h1>
                 <p>YEARS OF EXPERIENCE</p>
               </div>
               <hr />
               <div className='aboutme-achievement'>
-                <h1>8+</h1>
+                <h1><CountUp from={0}
+                    to={8}
+                    separator=","
+                    direction="up"
+                    duration={0.5}
+                    className="count-up-text"
+                  />+</h1>
                 <p>PROJECTS COMPLETED</p>
               </div>
               <hr />
               <div className='aboutme-achievement'>
-                <h1>2+</h1>
+                <h1><CountUp from={0}
+                    to={2}
+                    separator=","
+                    direction="up"
+                    duration={0.5}
+                    className="count-up-text"
+                  />+</h1>
                 <p>CERTIFICATIONS</p>
               </div>
             </div>
@@ -98,49 +133,28 @@ const AboutMe = () => {
         </div>
       </div>
 
-      {/* <h1>Techonologies i use</h1> */}
       <div className='tech-stack'>
-        <div className='frontend stack' data-aos='fade-up' data-aos-duration='1500'>
-          <h1>Frontend</h1>
-          <div className='icons-container'>
-            {frontStacks.map((stack, index) => {
-              return (
-                <div className='icon-details'>
-                  <img src={stack.icon} alt={stack.name} />
-                  <label htmlFor="">{stack.name}</label>
-                </div>
-              )
-            })}
-          </div>
-        </div>
-
-        <div className='backend stack'  data-aos='fade-up' data-aos-duration='1500'>
-          <h1>Backend</h1>
-          <div className='icons-container'>
-            {backendStack.map((stack, index) => {
-              return (
-                <div className='icon-details'>
-                  <img src={stack.icon} alt={stack.name} />
-                  <label htmlFor="">{stack.name}</label>
-                </div>
-              )
-            })}
-          </div>
-        </div>
-
-        <div className='other stack' data-aos='fade-up' data-aos-duration='1500'>
-          <h1>Tools</h1>
-          <div className='icons-container' >
-            {otherStack.map((stack, index) => {
-              return (
-                <div className='icon-details'>
-                  <img src={stack.icon} alt={stack.name} />
-                  <label htmlFor="">{stack.name}</label>
-                </div>
-              )
-            })}
-          </div>
-        </div>
+        {
+          techStacks.map((techStack, index) =>{
+            return (
+              <div className={`${techStack.stack} stack`} key={index} data-aos='fade-up' data-aos-duration='1500'>
+                <h1>{techStack.stack.charAt(0).toUpperCase() + techStack.stack.slice(1)}</h1>
+                  <div className='icons-container'>
+                    {
+                      techStack.languages.map((language, index) => {
+                        return (
+                          <div className='icon-details' key={index}>
+                            <img src={language.icon} alt={language.name} />
+                            <label htmlFor="">{language.name}</label>
+                          </div>
+                        )
+                      })
+                    }
+                  </div>
+               </div>
+            )
+          })
+        }
       </div>
     
     </div>
