@@ -16,8 +16,8 @@
   margin: auto;
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
+  align-items: stretch;
+  justify-content: space-evenly;
   width: 100%;
   gap: 20px;
 }
@@ -55,15 +55,39 @@
   text-align: justify;
 }
 
-.tools-used{
+.project-tools{
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
 }
 
 
-.tools-used img{
+.project-tools img{
   object-fit: scale-down;
   width: 40px;
   height: 35px;
+}
+
+.project-links{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.project-links a{
+  text-decoration: none;
+  font-size: 16px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 50px;
+  color: #fff;
+  border:   1px solid #fff;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+
+.project-links a:hover{
+ background-color: #ffff;
+ color: black;
 }

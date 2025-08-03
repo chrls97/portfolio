@@ -3,6 +3,10 @@ import './Projects.css'
 import Aos from 'aos' 
 import 'aos/dist/aos.css'
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faGithub } from '@fortawesome/free-brands-svg-icons'
+
+
 import html from '../../Assets/stack_icons/html.png'
 import css from '../../Assets/stack_icons/css.png'
 import js from '../../Assets/stack_icons/js.png'
@@ -28,6 +32,24 @@ const Projects = () => {
     liveViewLink: '#',
     github: true,
     githubLink: '#'
+  },{
+    title: 'iSolutions Website',
+    description: 'Lorem ipsum does, maxime sint nihil exercitationem eum! Eius, beatae!',
+    image: charles,
+    toolsUsed: [html, css, js, bootstrap, php, mysql],
+    liveView: true,
+    liveViewLink: '#',
+    github: true,
+    githubLink: '#'
+  },{
+    title: 'iSolutions Website',
+    description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta ad commodi voluptates harum eos delectus, molestias totam possimus suscipit doloribus nisi labore maiores, maxime sint nihil exercitationem eum! Eius, beatae!',
+    image: charles,
+    toolsUsed: [html, css, js, bootstrap, php, mysql],
+    liveView: true,
+    liveViewLink: '#',
+    github: true,
+    githubLink: '#'
   }];
 
   return (
@@ -39,13 +61,13 @@ const Projects = () => {
           {
             projects.map((project, index) => {
               return(
-                <div className="project-card" key={index}>
+                <div className="project-card" key={index} data-aos='fade-up' data-aos-duration='1500'>
                   <img src={project.image} alt="" />
                   <div className="card-body">
                     <h2>{project.title}</h2>
                     <p>{project.description}</p>
                     <h4>Tools Used</h4>
-                    <div className="tools-used">
+                    <div className="project-tools">
                       {
                         project.toolsUsed.map((tool, index) => {
                           return (
@@ -54,9 +76,9 @@ const Projects = () => {
                         })
                       }
                     </div>
-                    <div>
-                      <button>Live View</button>
-                      <button>Github</button>
+                    <div className='project-links'>
+                      {project.liveView ? <a href={project.liveViewLink}><FontAwesomeIcon icon={faGithub} />View Live</a> :''}
+                      {project.github ? <a href={project.githubLink}><FontAwesomeIcon icon={faGithub} /> Github</a> :''}
                     </div>
                   </div>
                 </div>
