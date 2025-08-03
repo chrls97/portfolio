@@ -11,7 +11,7 @@ import php from '../../Assets/stack_icons/php.png'
 import mysql from '../../Assets/stack_icons/mysql.png'
 
 import charles from '../../assets/charles.jpg'
-import { hr } from 'framer-motion/client'
+import { div, hr } from 'framer-motion/client'
 
 const Projects = () => {
 
@@ -19,34 +19,50 @@ const Projects = () => {
     Aos.init()
   },[])
 
+  const projects = [{
+    title: 'iSolutions Operations System',
+    description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta ad commodi voluptates harum eos delectus, molestias totam possimus suscipit doloribus nisi labore maiores, maxime sint nihil exercitationem eum! Eius, beatae!',
+    image: charles,
+    toolsUsed: [html, css, js, bootstrap, php, mysql],
+    liveView: true,
+    liveViewLink: '#',
+    github: true,
+    githubLink: '#'
+  }];
+
   return (
     <>
      
       <div id="projects">
         <h1 className='title' data-aos='fade-up' data-aos-duration='1500'> Projects</h1>
         <div className='projects-content'>
-          <div className='project-card' >
-            <img src={charles} alt="" />
-            <div className='card-body'>
-              <h2>iSolutions Operations System</h2>
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta ad commodi voluptates harum eos delectus, molestias totam possimus suscipit doloribus nisi labore maiores, maxime sint nihil exercitationem eum! Eius, beatae!</p>
-              
-              <h4>Tools Used</h4>
-              <div className='tools-used'>
-                <img src={html} alt="" />
-                <img src={css} alt="" />
-                <img src={js} alt="" />
-                <img src={bootstrap} alt="" />
-                <img src={php} alt="" />
-                <img src={mysql} alt="" />
-              </div>
-
-              <div>
-                <button>Live View</button>
-                <button>Github</button>
-              </div>
-            </div>
-          </div>
+          {
+            projects.map((project, index) => {
+              return(
+                <div className="project-card" key={index}>
+                  <img src={project.image} alt="" />
+                  <div className="card-body">
+                    <h2>{project.title}</h2>
+                    <p>{project.description}</p>
+                    <h4>Tools Used</h4>
+                    <div className="tools-used">
+                      {
+                        project.toolsUsed.map((tool, index) => {
+                          return (
+                            <img src={tool} alt="" key={index}/>
+                          )
+                        })
+                      }
+                    </div>
+                    <div>
+                      <button>Live View</button>
+                      <button>Github</button>
+                    </div>
+                  </div>
+                </div>
+              )
+            })
+          }
         </div>
         
       </div>
