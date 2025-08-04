@@ -34,6 +34,7 @@ import cslauncher from '../../assets/system_ss/cslauncher.png'
 import misOperations from '../../assets/system_ss/mis-operations.png'
 import upc from '../../assets/system_ss/upc-website.png'
 import eeg from '../../assets/system_ss/eeg-website.png'
+import ProjectCards from '../ProjectCards/ProjectCards';
 
 
 
@@ -98,39 +99,30 @@ const AllProjects = () => {
   return (
     <>
      <div id="all-projects">
-        <h1 className='title' > Projects</h1>
+        <h1 className='title' > All of my Projects</h1>
         <div className='projects-content'>
           {
             projects.map((project, index) => {
               return(
-                <div className="project-card" key={index} >
-                  <img src={project.image} alt="" />
-                  <div className="card-body">
-                    <h2>{project.title}</h2>
-                    <p>{project.description}</p>
-                    <h4>Tools Used</h4>
-                    <div className="project-tools">
-                      {
-                        project.toolsUsed.map((tool, index) => {
-                          return (
-                            <img src={tool} alt="" key={index}/>
-                          )
-                        })
-                      }
-                    </div>
-                    <div className='project-links'>
-                      {project.liveView ? <a href={project.liveViewLink} target='_blank'>View Live</a> :''}
-                      {project.github ? <a href={project.githubLink} target='_blank'><FontAwesomeIcon icon={faGithub} /> Github</a> :''}
-                    </div>
-                  </div>
-                </div>
+                <ProjectCards 
+                  title={project.title} 
+                  image={project.image}
+                  description={project.description}
+                  toolsUsed={project.toolsUsed}
+                  liveView={project.liveView}
+                  liveViewLink={project.liveViewLink}
+                  github={project.github}
+                  githubLink={project.githubLink}
+                  key={index}
+                />
               )
             })
           }
           
         
         </div>
-        
+       
+        <br /><br /><br />
       </div>
     </>
   )

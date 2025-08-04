@@ -36,6 +36,7 @@ import eeg from '../../assets/system_ss/eeg-website.png'
 
 import { div, hr } from 'framer-motion/client'
 import { Link } from 'react-router-dom'
+import ProjectCards from '../ProjectCards/ProjectCards'
 
 const Projects = () => {
 
@@ -103,32 +104,28 @@ const Projects = () => {
     <>
      
       <div id="projects">
-        <h1 className='title' data-aos='fade-up' data-aos-duration='1500'> Projects</h1>
+        <div className='projects-header' data-aos='fade-up' data-aos-duration='1500'>
+          <span className='featured-text'>Featured</span><span className='projects-text'>Projects</span>
+         
+        </div>
+       
+       
         <div className='projects-content'>
           {
             projects.map((project, index) => {
               return(
-                <div className="project-card" key={index} data-aos='fade-up' data-aos-duration='1500'>
-                  <img src={project.image} alt="" />
-                  <div className="card-body">
-                    <h2>{project.title}</h2>
-                    <p>{project.description}</p>
-                    <h4>Tools Used</h4>
-                    <div className="project-tools">
-                      {
-                        project.toolsUsed.map((tool, index) => {
-                          return (
-                            <img src={tool} alt="" key={index}/>
-                          )
-                        })
-                      }
-                    </div>
-                    <div className='project-links'>
-                      {project.liveView ? <a href={project.liveViewLink} target='_blank'>View Live</a> :''}
-                      {project.github ? <a href={project.githubLink} target='_blank'><FontAwesomeIcon icon={faGithub} /> Github</a> :''}
-                    </div>
-                  </div>
-                </div>
+                <ProjectCards 
+                  title={project.title} 
+                  image={project.image}
+                  description={project.description}
+                  toolsUsed={project.toolsUsed}
+                  liveView={project.liveView}
+                  liveViewLink={project.liveViewLink}
+                  github={project.github}
+                  githubLink={project.githubLink}
+                  key={index}
+               
+                />
               )
             })
           }
