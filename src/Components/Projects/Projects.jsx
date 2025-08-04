@@ -1,10 +1,11 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import './Projects.css'
 import Aos from 'aos' 
 import 'aos/dist/aos.css'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 
 
 import html from '../../Assets/stack_icons/html.png'
@@ -34,6 +35,7 @@ import upc from '../../assets/system_ss/upc-website.png'
 import eeg from '../../assets/system_ss/eeg-website.png'
 
 import { div, hr } from 'framer-motion/client'
+import { Link } from 'react-router-dom'
 
 const Projects = () => {
 
@@ -41,7 +43,7 @@ const Projects = () => {
     Aos.init()
   },[])
 
-  const projects = [{
+  const [projects, setProjects] = useState([{
     title: 'iSolutions Operations System',
     description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta ad commodi voluptates harum eos delectus, molestias totam possimus suscipit doloribus nisi labore maiores, maxime sint nihil exercitationem eum! Eius, beatae!',
     image: isii,
@@ -95,7 +97,7 @@ const Projects = () => {
     liveViewLink: 'http://www.cargosoft.com.ph/cargosoft-launcher/',
     github: true,
     githubLink: '#'
-  }];
+  }]);
 
   return (
     <>
@@ -130,8 +132,9 @@ const Projects = () => {
               )
             })
           }
-          <div>
-            <button>See More</button>
+          
+          <div className='more-projects'>
+            <Link onClick={() => window.scrollTo(0, 0)} to={'/projects' } > See More Projects <FontAwesomeIcon icon={faArrowRight} /> </Link>
           </div>
         </div>
         
