@@ -1,11 +1,11 @@
-#projects{
+#all-projects{
   display: flex;
   flex-direction: column  ;
   width: 100%;
   padding:2% 10%;
 }
 
-#projects .title{
+#all-projects .title{
   font-size: 3.5rem;
   font-weight: 500;
   text-align: center;
@@ -19,7 +19,8 @@
   align-items: stretch;
   justify-content: space-evenly;
   width: 100%;
-  gap: 20px;
+  row-gap: 40px;
+  column-gap: 20px;
 }
 
 .project-card{

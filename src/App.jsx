@@ -5,11 +5,12 @@ import AboutMe from './Components/AboutMe/AboutMe'
 import Projects from './Components/Projects/Projects'
 import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from 'react-router-dom'
 import RouteLayout from './layout/RouteLayout'
+import AllProjects from './Components/AllProjects/AllProjects'
 
 const App = () => {
   const router = createBrowserRouter(createRoutesFromElements(
     // Main layout with Navbar
-    <Route path='/' element={<RouteLayout/>}> 
+    <Route path='' element={<RouteLayout/>}> 
       <Route index element={ // Default route
         <>
           <Hero />
@@ -17,6 +18,8 @@ const App = () => {
           <Projects />
         </>
       } />
+      
+      <Route path='projects' element={<AllProjects />} />
     </Route>
   ));
 
