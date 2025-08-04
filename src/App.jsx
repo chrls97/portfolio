@@ -6,6 +6,7 @@ import Projects from './Components/Projects/Projects'
 import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from 'react-router-dom'
 import RouteLayout from './layout/RouteLayout'
 import AllProjects from './Components/AllProjects/AllProjects'
+import Contact from './components/Contact/Contact'
 
 const App = () => {
   const router = createBrowserRouter(createRoutesFromElements(
@@ -16,6 +17,7 @@ const App = () => {
           <Hero />
           <AboutMe />
           <Projects />
+          <Contact />
         </>
       } />
       

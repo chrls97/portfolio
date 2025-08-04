@@ -1,0 +1,137 @@
+#contact{
+  display: flex;
+  flex-direction: column  ;
+  width: 100%;
+  padding:2% 10%;
+  margin-bottom: 50px;
+}
+
+#contact .contact-header{
+  font-size: 3.5rem;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.contact-section{
+  display: flex;
+  justify-content: space-evenly;
+  gap: 20px;
+  width: 100%;
+}
+
+.contact-section hr{
+  border: 1px solid rgba(128, 128, 128, 0.315);
+}
+.contact-left{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  flex-basis: 48%;
+  gap: 10px;
+}
+
+
+.contact-left h2{
+  font-size: 1.8rem;
+}
+
+.contact-left p {
+  max-width: 550px;
+  font-size: 1.1rem;
+  text-align: right;
+}
+
+.contact-details{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 20px;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+.contact-detail{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.contact-detail .contact-icon{
+  font-size: 25px;
+}
+
+.contact-follow{
+  display: flex;
+  gap:10px;
+}
+
+.contact-follow a{
+  border: 2px solid #ffff;
+  border-radius: 50%;
+  padding: 5px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out; 
+  color: #ffff;
+}
+.contact-follow a:hover{
+   color: #000000;
+  background: #fff;
+}
+
+.contact-right{
+  display: flex;
+  flex-basis: 48%;
+  flex-direction: column;
+  align-items: start;
+}
+
+.contact-right form{
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+}
+
+.contact-right form label{
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.contact-right form input{
+  border: 0;
+  height: 40px;
+  padding: 0px 10px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  font-size: 15px;
+  color: #2b2a2a;
+  font-family: "Outfit";
+}
+
+.contact-right form textarea{
+  border: 0;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  font-size: 15px;
+  color: #2b2a2a;
+  font-family: "Outfit";
+}
+
+.contact-right .submit-btn{
+  font-family: "Outfit";
+  font-weight: 600;
+  border: none;
+  color: #fff;
+  border-radius: 50px;
+  background: linear-gradient(100deg, #0639a7 1.09%, #15b5ff);
+  font-size: 15px;
+  padding: 10px 20px;
+  margin-bottom: 20p1;
+  cursor: pointer;
+  transform: 0.3s;
+  letter-spacing: 1px;
+
+}
