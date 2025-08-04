@@ -106,7 +106,6 @@ const Projects = () => {
       <div id="projects">
         <div className='projects-header' data-aos='fade-up' data-aos-duration='1500'>
           <span className='featured-text'>Featured</span><span className='projects-text'>Projects</span>
-         
         </div>
        
        
