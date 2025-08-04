@@ -129,7 +129,7 @@ const Projects = () => {
             })
           }
           
-          <div className='more-projects'>
+          <div className='more-projects' data-aos='fade-up' data-aos-duration='1500'>
             <Link onClick={() => window.scrollTo(0, 0)} to={'/projects' } > See More Projects <FontAwesomeIcon icon={faArrowRight} /> </Link>
           </div>
         </div>
