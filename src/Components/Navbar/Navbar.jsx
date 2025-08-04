@@ -6,8 +6,7 @@ import { HashLink } from 'react-router-hash-link';
 const Navbar = () => {
   return (
     <div className='navbar'>
-      <h2>CHARLES <span>AMON</span></h2>
-
+      <HashLink smooth to="/#hero"><h2>CHARLES <span>AMON</span></h2></HashLink>
       <ul>
 
         <li><HashLink smooth to="/#hero">Home</HashLink></li>

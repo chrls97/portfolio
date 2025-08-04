@@ -13,8 +13,13 @@
   
 }
 
+.navbar a{
+  text-decoration: none;
+}
+
 .navbar h2{
   font-size: 2rem;
+  color: white;
 }
 .navbar h2 span{
   margin-left: 5px;
