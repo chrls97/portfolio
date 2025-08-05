@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import './AboutMe.css'
 import Aos from 'aos'
 import 'aos/dist/aos.css'
-import CountUp from '../../animation/CountUp';
+import CountUp from '../../Animation/CountUp';
 import charles from '../../assets/charles.jpg'
 
 import html from '../../assets/stack_icons/html.png'

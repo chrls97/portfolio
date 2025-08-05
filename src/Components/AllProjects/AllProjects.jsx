@@ -5,6 +5,8 @@ import { useLocation } from 'react-router-dom';
 import Aos from 'aos' 
 import 'aos/dist/aos.css'
 
+import ProjectCards from '../ProjectCards/ProjectCards'
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
@@ -28,101 +30,100 @@ import postman from '../../assets/stack_icons/postman.png'
 import npm from '../../assets/stack_icons/npm.png'
 import photoshop from '../../assets/stack_icons/photoshop.png'
 
-import charles from '../../assets/charles.jpg'
+import isii_ops from '../../assets/system_ss/isii-ops.png'
 import isii from '../../assets/system_ss/isi-website.png'
 import cslauncher from '../../assets/system_ss/cslauncher.png'
 import misOperations from '../../assets/system_ss/mis-operations.png'
 import upc from '../../assets/system_ss/upc-website.png'
 import eeg from '../../assets/system_ss/eeg-website.png'
-// import ProjectCards from '../ProjectCards/ProjectCards';
-
-
-
 
 const AllProjects = () => {
-  const [projects, setProjects] = useState  ([{
-      title: 'iSolutions Operations System',
-      description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta ad commodi voluptates harum eos delectus, molestias totam possimus suscipit doloribus nisi labore maiores, maxime sint nihil exercitationem eum! Eius, beatae!',
-      image: isii,
-      toolsUsed: [html, css, js, bootstrap, php, mysql],
-      liveView: true,
-      liveViewLink: '#',
-      github: true,
-      githubLink: '#'
-    },{
-      title: 'iSolutions Website',
-      description: 'Lorem ipsum does, maxime sint nihil exercitationem eum! Eius, beatae!',
-      image: isii,
-      toolsUsed: [html, css, js, bootstrap, php, mysql],
-      liveView: true,
-      liveViewLink: '#',
-      github: true,
-      githubLink: '#'
-    },{
-      title: 'United Portusers Confederation Website',
-      description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta ad commodi voluptates harum eos delectus, molestias totam possimus suscipit doloribus nisi labore maiores, maxime sint nihil exercitationem eum! Eius, beatae!',
-      image: upc,
-      toolsUsed: [html, css, js, bootstrap, php, mysql],
-      liveView: true,
-      liveViewLink: '#',
-      github: true,
-      githubLink: '#'
-    },{
-      title: 'Eagle Express Lines Website',
-      description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta ad commodi voluptates harum eos delectus, molestias totam possimus suscipit doloribus nisi labore maiores, maxime sint nihil exercitationem eum! Eius, beatae!',
-      image: eeg,
-      toolsUsed: [html, css, js, bootstrap, php, mysql],
-      liveView: true,
-      liveViewLink: '#',
-      github: true,
-      githubLink: '#'
-    },{
-      title: 'MIS Operations System',
-      description: 'Lorem ipsum does, maxime sint nihil exercitationem eum! Eius, beatae!',
-      image: misOperations,
-      toolsUsed: [html, css, js, bootstrap, php, mysql],
-      liveView: true,
-      liveViewLink: 'http://www.cargosoft.com.ph/mis-operations/index.php',
-      github: true,
-      githubLink: '#'
-    },{
-      title: 'Cargosoft Launcher System',
-      description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta ad commodi voluptates harum eos delectus, molestias totam possimus suscipit doloribus nisi labore maiores, maxime sint nihil exercitationem eum! Eius, beatae!',
-      image: cslauncher,
-      toolsUsed: [html, css, js, bootstrap, php, mysql],
-      liveView: true,
-      liveViewLink: 'http://www.cargosoft.com.ph/cargosoft-launcher/',
-      github: true,
-      githubLink: '#'
-    }]);
+  const [projects, setProjects] = useState([{
+    title: 'iSolutions Operations System',
+    description: 'Designed and developed a comprehensive ERP system to streamline business operations across multiple departments, including Sales, Purchasing, Accounting, Marketing, and Technical Services. The system features an intuitive dashboard, real-time reporting, and role-based access control, enhancing productivity, data accuracy, and decision-making.',
+    image: isii_ops,
+    toolsUsed: [html, css, js, bootstrap, php, mysql],
+    liveView: false,
+    liveViewLink: '#',
+    github: false,
+    githubLink: '#',
+    gallery:true
+  },{
+    title: 'iSolutions International Inc. Website',
+    description: 'iSolutions International Inc. presents a dynamic and responsive website designed to showcase comprehensive company information, services, solutions, and products. The platform ensures seamless accessibility across all devices, delivering an optimal user experience for clients and stakeholders.',
+    image: isii,
+    toolsUsed: [html, css, js, bootstrap, php, mysql],
+    liveView: true,
+    liveViewLink: 'http://www.isolutions.com.ph/',
+    github: false,
+    githubLink: '#',
+    gallery:false
+  },{
+    title: 'United Portusers Confederation Website',
+    description: 'Developed a fully responsive website for the United Portusers Confederation of the Philippines, Inc. to enhance digital presence and improve member engagement. The platform features a custom Content Management System for real-time updates on news, events, and member listings, while effectively showcasing the organization’s mission, structure, and membership application process.',
+    image: upc,
+    toolsUsed: [html, css, js, bootstrap, php, mysql],
+    liveView: true,
+    liveViewLink: 'https://www.upc-philippines.org/',
+    github: false,
+    githubLink: '#',
+    gallery:false
+  },{
+    title: 'MIS Operations System',
+    description: 'Lorem ipsum does, maxime sint nihil exercitationem eum! Eius, beatae!',
+    image: misOperations,
+    toolsUsed: [html, css, js, bootstrap, php, mysql],
+    liveView: true,
+    liveViewLink: 'http://www.cargosoft.com.ph/mis-operations/',
+    github: false,
+    githubLink: '#',
+    gallery:false
+  },{
+    title: 'Cargosoft Launcher System',
+    description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta ad commodi voluptates harum eos delectus, molestias totam possimus suscipit doloribus nisi labore maiores, maxime sint nihil exercitationem eum! Eius, beatae!',
+    image: cslauncher,
+    toolsUsed: [html, css, js, bootstrap, php, mysql],
+    liveView: true,
+    liveViewLink: 'http://www.cargosoft.com.ph/cargosoft-launcher/',
+    github: false,
+    githubLink: '#',
+    gallery:false
+  },{
+    title: 'Eagle Express Lines Website',
+    description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta ad commodi voluptates harum eos delectus, molestias totam possimus suscipit doloribus nisi labore maiores, maxime sint nihil exercitationem eum! Eius, beatae!',
+    image: eeg,
+    toolsUsed: [html, css, js, bootstrap, php, mysql],
+    liveView: true,
+    liveViewLink: 'http://www.eaglegroup.com.ph/',
+    github: false,
+    githubLink: '#',
+    gallery:false
+  }]);
 
   return (
-    <>
      <div id="all-projects">
         <h1 className='title' > All of my Projects</h1>
         <div className='projects-content'>
-          {/* {
-            projects.map((project, index) => {
-              return(
-                <ProjectCards 
-                  title={project.title} 
-                  image={project.image}
-                  description={project.description}
-                  toolsUsed={project.toolsUsed}
-                  liveView={project.liveView}
-                  liveViewLink={project.liveViewLink}
-                  github={project.github}
-                  githubLink={project.githubLink}
-                  key={index}
-                />
-              )
-            })
-          } */}
-          
-        
+         {projects.map((project, index) => {
+          return(
+            <ProjectCards 
+              title={project.title} 
+              image={project.image}
+              description={project.description}
+              toolsUsed={project.toolsUsed}
+              liveView={project.liveView}
+              liveViewLink={project.liveViewLink}
+              github={project.github}
+              githubLink={project.githubLink}
+              gallery={project.gallery}
+              key={index}
+            />
+          )
+         })
+
+         }
         </div>
       </div>
-    </>
   )
 }
 
