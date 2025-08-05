@@ -25,9 +25,8 @@
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-weight: 800;
   
-  /* color: #78cc5f; */
+  font-weight: 800;
   text-transform: uppercase;
 }
 .projects-content{
