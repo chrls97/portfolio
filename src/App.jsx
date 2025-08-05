@@ -7,6 +7,7 @@ import RouteLayout from './layout/RouteLayout'
 import AllProjects from './components/AllProjects/AllProjects'
 import Contact from './components/Contact/Contact'
 
+
 const App = () => {
   const router = createBrowserRouter(createRoutesFromElements(
     // Main layout with Navbar
