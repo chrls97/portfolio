@@ -27,7 +27,7 @@ import postman from '../../Assets/stack_icons/postman.png'
 import npm from '../../Assets/stack_icons/npm.png'
 import photoshop from '../../Assets/stack_icons/photoshop.png'
 
-import charles from '../../assets/charles.jpg'
+import isii_ops from '../../assets/system_ss/isii-ops.png'
 import isii from '../../assets/system_ss/isi-website.png'
 import cslauncher from '../../assets/system_ss/cslauncher.png'
 import misOperations from '../../assets/system_ss/mis-operations.png'
@@ -46,31 +46,34 @@ const Projects = () => {
 
   const [projects, setProjects] = useState([{
     title: 'iSolutions Operations System',
-    description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta ad commodi voluptates harum eos delectus, molestias totam possimus suscipit doloribus nisi labore maiores, maxime sint nihil exercitationem eum! Eius, beatae!',
-    image: isii,
+    description: 'Designed and developed a comprehensive ERP system to streamline business operations across multiple departments, including Sales, Purchasing, Accounting, Marketing, and Technical Services. The system features an intuitive dashboard, real-time reporting, and role-based access control, enhancing productivity, data accuracy, and decision-making.',
+    image: isii_ops,
     toolsUsed: [html, css, js, bootstrap, php, mysql],
-    liveView: true,
+    liveView: false,
     liveViewLink: '#',
-    github: true,
-    githubLink: '#'
+    github: false,
+    githubLink: '#',
+    gallery:true
   },{
-    title: 'iSolutions Website',
-    description: 'Lorem ipsum does, maxime sint nihil exercitationem eum! Eius, beatae!',
+    title: 'iSolutions International Inc. Website',
+    description: 'iSolutions International Inc. presents a dynamic and responsive website designed to showcase comprehensive company information, services, solutions, and products. The platform ensures seamless accessibility across all devices, delivering an optimal user experience for clients and stakeholders.',
     image: isii,
     toolsUsed: [html, css, js, bootstrap, php, mysql],
     liveView: true,
-    liveViewLink: '#',
-    github: true,
-    githubLink: '#'
+    liveViewLink: 'http://www.isolutions.com.ph/',
+    github: false,
+    githubLink: '#',
+    gallery:false
   },{
     title: 'United Portusers Confederation Website',
-    description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta ad commodi voluptates harum eos delectus, molestias totam possimus suscipit doloribus nisi labore maiores, maxime sint nihil exercitationem eum! Eius, beatae!',
+    description: 'Developed a fully responsive website for the United Portusers Confederation of the Philippines, Inc. to enhance digital presence and improve member engagement. The platform features a custom Content Management System for real-time updates on news, events, and member listings, while effectively showcasing the organization’s mission, structure, and membership application process.',
     image: upc,
     toolsUsed: [html, css, js, bootstrap, php, mysql],
     liveView: true,
-    liveViewLink: '#',
-    github: true,
-    githubLink: '#'
+    liveViewLink: 'https://www.upc-philippines.org/',
+    github: false,
+    githubLink: '#',
+    gallery:false
   },{
     title: 'Eagle Express Lines Website',
     description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta ad commodi voluptates harum eos delectus, molestias totam possimus suscipit doloribus nisi labore maiores, maxime sint nihil exercitationem eum! Eius, beatae!',
@@ -79,7 +82,8 @@ const Projects = () => {
     liveView: true,
     liveViewLink: '#',
     github: true,
-    githubLink: '#'
+    githubLink: '#',
+    gallery:true
   },{
     title: 'MIS Operations System',
     description: 'Lorem ipsum does, maxime sint nihil exercitationem eum! Eius, beatae!',
@@ -88,7 +92,8 @@ const Projects = () => {
     liveView: true,
     liveViewLink: 'http://www.cargosoft.com.ph/mis-operations/index.php',
     github: true,
-    githubLink: '#'
+    githubLink: '#',
+    gallery:true
   },{
     title: 'Cargosoft Launcher System',
     description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta ad commodi voluptates harum eos delectus, molestias totam possimus suscipit doloribus nisi labore maiores, maxime sint nihil exercitationem eum! Eius, beatae!',
@@ -97,7 +102,8 @@ const Projects = () => {
     liveView: true,
     liveViewLink: 'http://www.cargosoft.com.ph/cargosoft-launcher/',
     github: true,
-    githubLink: '#'
+    githubLink: '#',
+    gallery:true
   }]);
 
   return (
@@ -107,7 +113,6 @@ const Projects = () => {
         <div className='projects-header' data-aos='fade-up' data-aos-duration='1500'>
           <span className='featured-text'>Featured</span><span className='projects-text'>Projects</span>
         </div>
-       
        
         <div className='projects-content'>
           {
@@ -122,17 +127,17 @@ const Projects = () => {
                   liveViewLink={project.liveViewLink}
                   github={project.github}
                   githubLink={project.githubLink}
+                  gallery={project.gallery}
                   key={index}
-               
                 />
               )
             })
           }
-          
-          <div className='more-projects' data-aos='fade-up' data-aos-duration='1500'>
+        </div>
+
+        <div className='more-projects' data-aos='fade-up' data-aos-duration='1500'>
             <Link onClick={() => window.scrollTo(0, 0)} to={'/projects' } > See More Projects <FontAwesomeIcon icon={faArrowRight} /> </Link>
           </div>
-        </div>
         
       </div>
     </>

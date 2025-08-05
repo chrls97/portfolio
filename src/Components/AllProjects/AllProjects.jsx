@@ -34,7 +34,7 @@ import cslauncher from '../../assets/system_ss/cslauncher.png'
 import misOperations from '../../assets/system_ss/mis-operations.png'
 import upc from '../../assets/system_ss/upc-website.png'
 import eeg from '../../assets/system_ss/eeg-website.png'
-import ProjectCards from '../ProjectCards/ProjectCards';
+// import ProjectCards from '../ProjectCards/ProjectCards';
 
 
 
@@ -101,7 +101,7 @@ const AllProjects = () => {
      <div id="all-projects">
         <h1 className='title' > All of my Projects</h1>
         <div className='projects-content'>
-          {
+          {/* {
             projects.map((project, index) => {
               return(
                 <ProjectCards 
@@ -117,12 +117,10 @@ const AllProjects = () => {
                 />
               )
             })
-          }
+          } */}
           
         
         </div>
-       
-        <br /><br /><br />
       </div>
     </>
   )
