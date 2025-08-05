@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
 import Aos from 'aos'
 import 'aos/dist/aos.css'
-import TextType  from '../../Animation/TextType';  
+import TextType  from '../../animation/TextType';  
 
 
 const Hero = () => {
