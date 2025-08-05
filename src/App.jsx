@@ -5,7 +5,7 @@ import Projects from './Components/Projects/Projects'
 import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from 'react-router-dom'
 import RouteLayout from './layout/RouteLayout'
 import AllProjects from './Components/AllProjects/AllProjects'
-import Contact from './components/Contact/Contact'
+import Contact from './components/Contact/Contact.jsx'
 
 const App = () => {
   const router = createBrowserRouter(createRoutesFromElements(
