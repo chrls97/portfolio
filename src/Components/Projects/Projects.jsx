@@ -75,25 +75,15 @@ const Projects = () => {
     githubLink: '#',
     gallery:false
   },{
-    title: 'Eagle Express Lines Website',
-    description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta ad commodi voluptates harum eos delectus, molestias totam possimus suscipit doloribus nisi labore maiores, maxime sint nihil exercitationem eum! Eius, beatae!',
-    image: eeg,
-    toolsUsed: [html, css, js, bootstrap, php, mysql],
-    liveView: true,
-    liveViewLink: '#',
-    github: true,
-    githubLink: '#',
-    gallery:true
-  },{
     title: 'MIS Operations System',
     description: 'Lorem ipsum does, maxime sint nihil exercitationem eum! Eius, beatae!',
     image: misOperations,
     toolsUsed: [html, css, js, bootstrap, php, mysql],
     liveView: true,
-    liveViewLink: 'http://www.cargosoft.com.ph/mis-operations/index.php',
-    github: true,
+    liveViewLink: 'http://www.cargosoft.com.ph/mis-operations/',
+    github: false,
     githubLink: '#',
-    gallery:true
+    gallery:false
   },{
     title: 'Cargosoft Launcher System',
     description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta ad commodi voluptates harum eos delectus, molestias totam possimus suscipit doloribus nisi labore maiores, maxime sint nihil exercitationem eum! Eius, beatae!',
@@ -101,9 +91,19 @@ const Projects = () => {
     toolsUsed: [html, css, js, bootstrap, php, mysql],
     liveView: true,
     liveViewLink: 'http://www.cargosoft.com.ph/cargosoft-launcher/',
-    github: true,
+    github: false,
     githubLink: '#',
-    gallery:true
+    gallery:false
+  },{
+    title: 'Eagle Express Lines Website',
+    description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta ad commodi voluptates harum eos delectus, molestias totam possimus suscipit doloribus nisi labore maiores, maxime sint nihil exercitationem eum! Eius, beatae!',
+    image: eeg,
+    toolsUsed: [html, css, js, bootstrap, php, mysql],
+    liveView: true,
+    liveViewLink: 'http://www.eaglegroup.com.ph/',
+    github: false,
+    githubLink: '#',
+    gallery:false
   }]);
 
   return (
