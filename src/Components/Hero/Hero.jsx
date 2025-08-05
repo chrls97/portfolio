@@ -18,7 +18,7 @@ const Hero = () => {
       <div className='hero-content'>
         <div className='hero-left' data-aos="fade-right" data-aos-duration="1500">
           <h2>Hi!,</h2>
-          <h1>I'm CHARLES LENNARD C. AMON</h1>
+          <h1>I'm <span>CHARLES LENNARD C. AMON</span></h1>
           <h2>
             <TextType 
               text={["Fullstack Developer", "Frontend Developer", "Backend Developer"]}

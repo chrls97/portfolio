@@ -64,7 +64,7 @@ const Contact = () => {
         <span>Get In Touch</span>
       </div>
       <div className='contact-section'>
-        <div className="contact-left" data-aos='fade-right' data-aos-duration='1500'>
+        <div className="contact-left" data-aos='fade-up' data-aos-duration='1500'>
           <h2>Let's Talk</h2>
           <p>I'm currently available to take a new projects, so feel free to send me a message about anything that you want me to work on. You can contact me anytime.</p>
           <div className='contact-details'>
@@ -93,7 +93,7 @@ const Contact = () => {
 
         </div>
         <hr />
-        <div className='contact-right' data-aos='fade-left' data-aos-duration='1500'>
+        <div className='contact-right' data-aos='fade-up' data-aos-duration='1500'>
           <form onSubmit={sendEmail}>
             <label htmlFor="">Your Name</label>
             <input type="text" placeholder='Your Name' value={name} onChange={(e)=>setName(e.target.value)} required />
