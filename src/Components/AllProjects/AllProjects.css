@@ -3,6 +3,7 @@
   flex-direction: column  ;
   width: 100%;
   padding:2% 10%;
+  height: 100%;
 }
 
 #all-projects .title{
