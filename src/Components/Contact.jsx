@@ -67,7 +67,7 @@ const Contact = () => {
         <span>Get In Touch</span>
       </div>
       <div className='flex flex-col sm:flex-row gap-5 mt-5'>
-        <div className="w-full sm:w-1/2 flex flex-col items-center sm:items-end gap-5"  data-aos="fade-right" data-aos-duration="1500">
+        <div className="w-full sm:w-1/2 flex flex-col items-center sm:items-end gap-5"  data-aos="fade-up" data-aos-duration="1500">
           <h2 className='text-3xl sm:text-4xl font-semibold'>Let's Talk</h2>
           <p className='max-w-220 text-center sm:text-right text-[18px]'>I'm currently available to take a new projects, so feel free to send me a message about anything that you want me to work on. You can contact me anytime.</p>
           <div className='flex flex-col text-[18px] gap-5 items-center sm:items-end'>
@@ -99,7 +99,7 @@ const Contact = () => {
 
 
         <hr className='border-[0.5px] border-gray-500  h-auto'/>
-        <div className="w-full sm:w-1/2"  data-aos="fade-left" data-aos-duration="1500">
+        <div className="w-full sm:w-1/2"  data-aos="fade-up" data-aos-duration="1500">
           <form onSubmit={sendEmail} className='flex flex-col gap-2'>
             <label htmlFor="" className='text-[18px]'>Your Name</label>
             <input type="text" placeholder='Your Name' value={name} onChange={(e)=>setName(e.target.value)} required className='text-[#2b2a2a] bg-white px-3 py-2 rounded text-[15px]'/>

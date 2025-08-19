@@ -1,101 +1,36 @@
 import React, { useEffect } from 'react'
-import './AboutMe.css'
-import Aos from 'aos'
-import 'aos/dist/aos.css'
 import CountUp from '../../Animation/CountUp';
-import charles from '../../assets/charles.jpg'
-
-import html from '../../Assets/stack_icons/html.png'
-import css from '../../Assets/stack_icons/css.png'
-import js from '../../Assets/stack_icons/js.png'
-import react from '../../Assets/stack_icons/react.png'
-import bootstrap from '../../Assets/stack_icons/bootstrap.png'
-import tailwind from '../../Assets/stack_icons/tailwind.png'
-import php from '../../Assets/stack_icons/php.png'
-import mysql from '../../Assets/stack_icons/mysql.png'
-import laravel from '../../Assets/stack_icons/laravel.png'
-import nodejs from '../../Assets/stack_icons/nodejs.png'
-import expressjs from '../../Assets/stack_icons/expressjs.png'
-import mongodb from '../../Assets/stack_icons/mongodb.png'
-import vscode from '../../Assets/stack_icons/vscode.png'
-import git from '../../Assets/stack_icons/git.png'
-import github from '../../Assets/stack_icons/github.png'
-import postman from '../../Assets/stack_icons/postman.png'
-import npm from '../../Assets/stack_icons/npm.png'
-import photoshop from '../../Assets/stack_icons/photoshop.png'
+import { assets, techStacks } from '../../assets/assets';
 
 const AboutMe = () => {
-
-  const techStacks = [
-    {
-      stack: 'frontend',
-      languages: [
-        { name: 'HTML', icon: html},
-        { name: 'CSS', icon: css},
-        { name: 'JavaScript', icon: js},
-        { name: 'React', icon: react},
-        { name: 'Bootstrap', icon: bootstrap},
-        { name: 'Tailwind', icon: tailwind}
-      ]
-    },{
-      stack: 'backend',
-      languages: [
-        { name: 'PHP', icon: php},
-        { name: 'Laravel', icon: laravel},
-        { name: 'NodeJs', icon: nodejs},
-        { name: 'ExpressJs', icon: expressjs},
-        { name: 'mySql', icon: mysql},
-        { name: 'MongoDB', icon: mongodb}
-      ]
-    },{
-      stack: 'tools',
-      languages: [
-        { name: 'VS Code', icon: vscode},
-        { name: 'Git', icon: git},
-        { name: 'Github', icon: github},
-        { name: 'Postman', icon: postman},
-        { name: 'NPM', icon: npm},
-        { name: 'Photoshop', icon: photoshop}
-      ]
-    }
-  ];
-
-    const portfolio = [
-      { project: 'Database management', images: ['https://i.imgur.com/1a2b3c4.png', 'https://i.imgur.com/5d6e7f8.png'], description: 'A web application for managing databases.' },
-      { project: 'E-commerce platform', images: ['https://i.imgur.com/9a0b1c2.png', 'https://i.imgur.com/3d4e5f6.png'], description: 'An online store with a user-friendly interface.' }]
-
-
-    useEffect(() => {
-      Aos.init();
-    },[])
-
-
-    
+  // data-aos='fade-up' data-aos-duration='1500'
+// data-aos='fade-up' data-aos-duration='1500'
   return (
-    <div id='aboutme'>
-      <div className='aboutme-content'>
-        <h1 className='title' data-aos='fade-up' data-aos-duration='1500'>About Me</h1>
-        <div className='aboutme-details' data-aos='fade-up' data-aos-duration='1500'>
-          <div className='aboutme-img'>
-            <img src={charles} alt='profile' />
+    <div id='aboutme' className='px-[5%] sm:px-[10%] py-[60px]'>
+      <div className='flex flex-col gap-10 items-center'>
+        <h1 className='text-[3rem] font-semibold mb-2' >ABOUT ME</h1>
+        <div className='flex flex-col sm:flex-row justify-center items-center gap-10' >
+          <div className='flex items-center justify-center w-full lg:1/2 xl:w-2/8'>
+            <img src={assets.profile} alt='profile' className='w-90 rounded-4xl' />
           </div>
-          <div className='aboutme-text'>
-            <div>
+
+          <div className='w-full lg:1/2 xl:w-6/8'>
+            <div className='flex flex-col gap-5 lg:text-[18px] xl:text-[21px] text-justify'>
               <p>
                 Hi, I'm Charles Lennard C. Amon, a Fullstack Developer with a passion for creating dynamic and responsive web applications. I specialize in both frontend and backend development, ensuring that your projects are not only visually appealing but also functionally robust.
-              </p><br/>
+              </p>
               <p>
                 With a strong foundation in HTML, CSS, JavaScript, and various frameworks, I bring your ideas to life through code. Whether it's building interactive user interfaces or developing server-side logic, I handle every aspect of the development process.
-              </p><br/>
-              <p>
+              </p>
+              <p className='text-[22px] lg:text-[21px] xl:text-[26px] font-semibold text-center sm:text-justify'>
                 Let's collaborate to turn your vision into reality!
               </p>
             </div>
             
 
-            <div className='aboutme-achievements'>
-              <div className='aboutme-achievement'>
-                <h1>
+            <div className='grid md:grid-cols-2 xl:grid-cols-3 mt-3 sm:mt-10 gap-5'>
+              <div className='flex flex-col justify-center text-center gap-2 sm:border-r sm:border-b-0 pr-5'>
+                <h1 className='text-[3rem] sm:text-[2rem] xl:text-[3rem] font-semibold bg-gradient-to-r from-[#0639a7] to-[#15b5ff] bg-clip-text text-transparent'>
                   <CountUp from={0}
                     to={6}
                     separator=","
@@ -104,47 +39,55 @@ const AboutMe = () => {
                     className="count-up-text"
                   />+
                 </h1>
-                <p>YEARS OF EXPERIENCE</p>
+                <p className='text-[20px] sm:text-[15px] xl:text-[20px] bg-gradient-to-r from-[#0639a7] to-[#15b5ff] bg-clip-text text-transparent font-extrabold'>YEARS OF EXPERIENCE</p>
               </div>
-              <hr />
-              <div className='aboutme-achievement'>
-                <h1><CountUp from={0}
+              
+
+              <div className='flex flex-col justify-center text-center gap-2 sm:border-r sm:border-b-0 pr-5'>
+                <h1 className='text-[3rem] sm:text-[2rem] xl:text-[3rem] font-semibold bg-gradient-to-r from-[#0639a7] to-[#15b5ff] bg-clip-text text-transparent'>
+                  <CountUp from={0}
                     to={8}
                     separator=","
                     direction="up"
                     duration={0.5}
                     className="count-up-text"
-                  />+</h1>
-                <p>PROJECTS COMPLETED</p>
+                  />+
+                </h1>
+                <p className='text-[20px] sm:text-[15px] xl:text-[20px] bg-gradient-to-r from-[#0639a7] to-[#15b5ff] bg-clip-text text-transparent font-extrabold'>PROJECTS COMPLETED</p>
               </div>
-              <hr />
-              <div className='aboutme-achievement'>
-                <h1><CountUp from={0}
+              <div className='flex flex-col justify-center text-center gap-2'>
+                <h1 className='text-[3rem] sm:text-[2rem] xl:text-[3rem] font-semibold bg-gradient-to-r from-[#0639a7] to-[#15b5ff] bg-clip-text text-transparent'>
+                  <CountUp from={0}
                     to={2}
                     separator=","
                     direction="up"
                     duration={0.5}
                     className="count-up-text"
-                  />+</h1>
-                <p>CERTIFICATIONS</p>
+                  />+
+                </h1>
+                <p className='text-[20px] sm:text-[15px] xl:text-[20px] bg-gradient-to-r from-[#0639a7] to-[#15b5ff] bg-clip-text text-transparent font-extrabold'>CERTIFICATIONS</p>
+              </div>
+
+              <div>
+
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      <div className='tech-stack'>
+      <div className='grid grid-cols-1 sm:grid-cols-3 gap-10 mt-10'>
         {
           techStacks.map((techStack, index) =>{
             return (
-              <div className={`${techStack.stack} stack`} key={index} data-aos='fade-up' data-aos-duration='1500'>
-                <h1>{techStack.stack.charAt(0).toUpperCase() + techStack.stack.slice(1)}</h1>
-                  <div className='icons-container'>
+              <div className='flex flex-col px-5 py-5 ' key={index} >
+                <h1 className='text-3xl text-center mb-5 font-semibold'>{techStack.stack.charAt(0).toUpperCase() + techStack.stack.slice(1)}</h1>
+                  <div className='grid grid-cols-5 md:gap-6 items-center  justify-center gap-5'>
                     {
                       techStack.languages.map((language, index) => {
                         return (
-                          <div className='icon-details' key={index}>
-                            <img src={language.icon} alt={language.name} />
+                          <div className='flex flex-col items-center justify-center gap-2' key={index}>
+                            <img src={language.icon} alt={language.name} className='w-10' />
                             <label htmlFor="">{language.name}</label>
                           </div>
                         )
