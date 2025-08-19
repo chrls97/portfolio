@@ -1,11 +1,12 @@
 import React from 'react'
-import Hero from './Components/Hero/Hero'
-import AboutMe from './Components/AboutMe/AboutMe'
+import Hero from './Components/Hero'
+import AboutMe from './Components/AboutMe'
 import Projects from './Components/Projects/Projects'
 import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from 'react-router-dom'
 import RouteLayout from './layout/RouteLayout'
 import AllProjects from './Components/AllProjects/AllProjects'
-import Contact from './Components/Contact/Contact'
+import Contact from './Components/Contact'
+import { ToastContainer } from 'react-toastify';
 
 
 const App = () => {
@@ -21,12 +22,13 @@ const App = () => {
         </>
       } />
       
-      <Route path='projects' element={<AllProjects />} />
+      <Route path='projects' element={<AllProjects />} />g
     </Route>
   ));
 
   return (
     <>
+      <ToastContainer />
       <RouterProvider router={router} />
     </>
   )
