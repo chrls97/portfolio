@@ -5,7 +5,8 @@ import Projects from './Components/Projects/Projects'
 import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from 'react-router-dom'
 import RouteLayout from './layout/RouteLayout'
 import AllProjects from './Components/AllProjects/AllProjects'
-import Contact from './Components/Contact/Contact'
+import Contact from './Components/Contact'
+import { ToastContainer } from 'react-toastify';
 
 const App = () => {
   const router = createBrowserRouter(createRoutesFromElements(
@@ -26,6 +27,7 @@ const App = () => {
 
   return (
     <>
+      <ToastContainer />
       <RouterProvider router={router} />
     </>
   )
