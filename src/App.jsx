@@ -1,6 +1,6 @@
 import React from 'react'
 import Hero from './Components/Hero'
-import AboutMe from './Components/AboutMe/AboutMe'
+import AboutMe from './Components/AboutMe'
 import Projects from './Components/Projects/Projects'
 import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from 'react-router-dom'
 import RouteLayout from './layout/RouteLayout'

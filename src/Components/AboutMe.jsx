@@ -1,13 +1,12 @@
 import React, { useEffect } from 'react'
-import CountUp from '../../Animation/CountUp';
-import { assets, techStacks } from '../../assets/assets';
+import CountUp from '../Animation/CountUp';
+import { assets, techStacks } from '../assets/assets';
 
 const AboutMe = () => {
-  // data-aos='fade-up' data-aos-duration='1500'
-// data-aos='fade-up' data-aos-duration='1500'
+
   return (
     <div id='aboutme' className='px-[5%] sm:px-[10%] py-[60px]'>
-      <div className='flex flex-col gap-10 items-center'>
+      <div className='flex flex-col gap-10 items-center'  data-aos='fade-up' data-aos-duration='1500'>
         <h1 className='text-[3rem] font-semibold mb-2' >ABOUT ME</h1>
         <div className='flex flex-col sm:flex-row justify-center items-center gap-10' >
           <div className='flex items-center justify-center w-full lg:1/2 xl:w-2/8'>
@@ -28,8 +27,8 @@ const AboutMe = () => {
             </div>
             
 
-            <div className='grid md:grid-cols-2 xl:grid-cols-3 mt-3 sm:mt-10 gap-5'>
-              <div className='flex flex-col justify-center text-center gap-2 sm:border-r sm:border-b-0 pr-5'>
+            <div className='flex  flex-wrap md:flex-none mt-3 sm:mt-10  justify-center items-center'>
+              <div className='flex flex-col w-full md:w-1/3 justify-center items-center text-center gap-2 lg:border-r  px-5'>
                 <h1 className='text-[3rem] sm:text-[2rem] xl:text-[3rem] font-semibold bg-gradient-to-r from-[#0639a7] to-[#15b5ff] bg-clip-text text-transparent'>
                   <CountUp from={0}
                     to={6}
@@ -41,9 +40,7 @@ const AboutMe = () => {
                 </h1>
                 <p className='text-[20px] sm:text-[15px] xl:text-[20px] bg-gradient-to-r from-[#0639a7] to-[#15b5ff] bg-clip-text text-transparent font-extrabold'>YEARS OF EXPERIENCE</p>
               </div>
-              
-
-              <div className='flex flex-col justify-center text-center gap-2 sm:border-r sm:border-b-0 pr-5'>
+              <div className='flex flex-col w-full md:w-1/3 justify-center items-center text-center gap-2 lg:border-r  px-5'>
                 <h1 className='text-[3rem] sm:text-[2rem] xl:text-[3rem] font-semibold bg-gradient-to-r from-[#0639a7] to-[#15b5ff] bg-clip-text text-transparent'>
                   <CountUp from={0}
                     to={8}
@@ -55,7 +52,7 @@ const AboutMe = () => {
                 </h1>
                 <p className='text-[20px] sm:text-[15px] xl:text-[20px] bg-gradient-to-r from-[#0639a7] to-[#15b5ff] bg-clip-text text-transparent font-extrabold'>PROJECTS COMPLETED</p>
               </div>
-              <div className='flex flex-col justify-center text-center gap-2'>
+              <div className='flex flex-col w-full md:w-1/3 justify-center items-center text-center gap-2'>
                 <h1 className='text-[3rem] sm:text-[2rem] xl:text-[3rem] font-semibold bg-gradient-to-r from-[#0639a7] to-[#15b5ff] bg-clip-text text-transparent'>
                   <CountUp from={0}
                     to={2}
@@ -67,27 +64,23 @@ const AboutMe = () => {
                 </h1>
                 <p className='text-[20px] sm:text-[15px] xl:text-[20px] bg-gradient-to-r from-[#0639a7] to-[#15b5ff] bg-clip-text text-transparent font-extrabold'>CERTIFICATIONS</p>
               </div>
-
-              <div>
-
-              </div>
             </div>
           </div>
         </div>
       </div>
 
-      <div className='grid grid-cols-1 sm:grid-cols-3 gap-10 mt-10'>
+      <div className='flex justify-center lg:justify-between flex-wrap lg:flex-nowrap gap-5 w-full items-center text-center mt-15'  data-aos='fade-up' data-aos-duration='1500'>
         {
           techStacks.map((techStack, index) =>{
             return (
-              <div className='flex flex-col px-5 py-5 ' key={index} >
-                <h1 className='text-3xl text-center mb-5 font-semibold'>{techStack.stack.charAt(0).toUpperCase() + techStack.stack.slice(1)}</h1>
-                  <div className='grid grid-cols-5 md:gap-6 items-center  justify-center gap-5'>
+              <div className='w-full md:max-w-[350px] lg:max-w-[550px] p-9 rounded-[10px] bg-[rgba(141,140,140,0.062)] shadow-lg' key={index} >
+                <h1 className='text-3xl font-semibold mb-8'>{techStack.stack.charAt(0).toUpperCase() + techStack.stack.slice(1)}</h1>
+                  <div className='flex flex-wrap items-center justify-center gap-5'>
                     {
                       techStack.languages.map((language, index) => {
                         return (
-                          <div className='flex flex-col items-center justify-center gap-2' key={index}>
-                            <img src={language.icon} alt={language.name} className='w-10' />
+                          <div className='flex flex-col justify-center items-center gap-2 cursor-pointer hover:translate-y-[-5px] transition-all duration-500' key={index}>
+                            <img src={language.icon} alt={language.name} className='w-15' />
                             <label htmlFor="">{language.name}</label>
                           </div>
                         )
