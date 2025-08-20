@@ -1,7 +1,6 @@
 import React from 'react'
 import Aos from 'aos' 
 import 'aos/dist/aos.css'
-import './ProjectCards.css';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
