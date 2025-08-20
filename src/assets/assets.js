@@ -19,8 +19,6 @@ import postman from './stack_icons/postman.png'
 import npm from './stack_icons/npm.png'
 import photoshop from './stack_icons/photoshop.png'
 
-<<<<<<< HEAD
-=======
 
 
 import isii_ops from './system_ss/isii-ops.png'
@@ -30,7 +28,6 @@ import misOperations from './system_ss/mis-operations.png'
 import upc from './system_ss/upc-website.png'
 import eeg from './system_ss/eeg-website.png'
 
->>>>>>> v2
 export const assets = {
   profile,
   html,
@@ -86,8 +83,6 @@ export const techStacks = [
     ]
   }
 ];
-<<<<<<< HEAD
-=======
 
 export const projects = [{
     title: 'iSolutions Operations System',
@@ -180,4 +175,3 @@ export const projects = [{
     githubLink: '#',
     gallery:false
   }]
->>>>>>> v2
