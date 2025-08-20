@@ -15,6 +15,10 @@ const Hero = () => {
   const linkedIn = 'https://www.linkedin.com/in/charles-lennard-amon-533715169'
 
   // Initialize AOS for animations
+  useEffect(() => {
+    Aos.init()
+  },[])
+
   
   return (
     <div id="hero" className='px-[5%] sm:px-[10%] py-0 sm:py-[30px]'>
