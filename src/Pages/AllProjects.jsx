@@ -1,0 +1,36 @@
+import React from 'react'
+import ProjectCards from '../Components/Cards/ProjectCards'
+import {projects} from '../assets/assets'
+
+
+
+const AllProjects = () => {
+
+  return (
+     <div id="all-projects" className='px-[5%] sm:px-[10%] py-[30px]'>
+        <h1 className='title' > All of my Projects</h1>
+        <div className='flex flex-wrap gap-5 items-stretch justify-center'>
+         {projects.map((project, index) => {
+          return(
+            <ProjectCards 
+              title={project.title} 
+              image={project.image}
+              description={project.description}
+              toolsUsed={project.toolsUsed}
+              liveView={project.liveView}
+              liveViewLink={project.liveViewLink}
+              github={project.github}
+              githubLink={project.githubLink}
+              gallery={project.gallery}
+              key={index}
+            />
+          )
+         })
+
+         }
+        </div>
+      </div>
+  )
+}
+
+export default AllProjects
