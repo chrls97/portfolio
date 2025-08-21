@@ -101,12 +101,12 @@ const Contact = () => {
         <hr className='border-[0.5px] border-gray-500  h-auto'/>
         <div className="w-full sm:w-1/2"  data-aos="fade-up" data-aos-duration="1500">
           <form onSubmit={sendEmail} className='flex flex-col gap-2'>
-            <label htmlFor="" className='text-[18px]'>Your Name</label>
-            <input type="text" placeholder='Your Name' value={name} onChange={(e)=>setName(e.target.value)} required className='text-[#2b2a2a] bg-white px-3 py-2 rounded text-[15px]'/>
-            <label htmlFor="" className='text-[18px]'>Your Email</label>
-            <input type="email" placeholder='Your Email' value={email} onChange={(e)=>setEmail(e.target.value)} required className='text-[#2b2a2a] bg-white px-3 py-2 rounded text-[15px]'/>
-            <label htmlFor="" className='text-[18px]'>Write you message here</label>
-            <textarea placeholder='Write you message here' value={message} onChange={(e)=>setMessage(e.target.value)} required rows='7' className='text-[#2b2a2a] bg-white px-3 py-2 rounded text-[15px]'></textarea>
+            <label htmlFor="name" className='text-[18px]'>Your Name</label>
+            <input type="text" id="name" placeholder='Your Name' value={name} onChange={(e)=>setName(e.target.value)} required className='text-[#2b2a2a] bg-white px-3 py-2 rounded text-[15px]' autoComplete='given-name'/>
+            <label htmlFor="email" className='text-[18px]'>Your Email</label>
+            <input type="email" id="email" placeholder='Your Email' value={email} onChange={(e)=>setEmail(e.target.value)} required className='text-[#2b2a2a] bg-white px-3 py-2 rounded text-[15px]' autoComplete='email'/>
+            <label htmlFor="message" className='text-[18px]'>Write you message here</label>
+            <textarea id="message" placeholder='Write you message here' value={message} onChange={(e)=>setMessage(e.target.value)} required rows='7' className='text-[#2b2a2a] bg-white px-3 py-2 rounded text-[15px]'></textarea>
             <button type='submit' className='text-[18px]  text-white bg-gradient-to-r from-[#0639a7] to-[#15b5ff]  px-5 py-2 rounded-full mt-2 cursor-pointer' disabled={isSubmitting}> <FontAwesomeIcon icon={faPaperPlane}  /> {isSubmitting? 'Email Sending...' : 'Send'}</button>
           </form>
         </div>

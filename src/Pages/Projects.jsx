@@ -7,10 +7,14 @@ import { Link } from 'react-router-dom'
 import ProjectCards from '../Components/Cards/ProjectCards'
 import { projects } from '../assets/assets'
 
+
 const Projects = () => {
   return (
     <>
+      
       <div id="projects" className='px-[5%] sm:px-[10%] py-[30px]'>
+
+  
         <div className='flex flex-col sm:flex-row items-center justify-center text-[3rem] mb-15'  >
           <span className='font-light pr-4'>Featured</span><span className='font-bold bg-gradient-to-r from-[#0639a7] to-[#15b5ff] bg-clip-text text-transparent'>PROJECTS</span>
         </div>

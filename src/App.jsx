@@ -7,6 +7,7 @@ import RouteLayout from './layout/RouteLayout'
 import AllProjects from './Pages/AllProjects'
 import Contact from './Pages/Contact'
 import { ToastContainer } from 'react-toastify';
+import ProjectModal from './Components/Modals/projectModal'
 
 
 const App = () => {
@@ -29,7 +30,12 @@ const App = () => {
   return (
     <>
       <ToastContainer />
-      <RouterProvider router={router} />
+      <div className='relative'>
+        <ProjectModal />
+        <RouterProvider router={router} />
+      </div>
+      
+      
     </>
   )
 }
