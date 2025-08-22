@@ -39,7 +39,6 @@ const ProjectCards = ({ id, details, title, description, toolsUsed, liveView, li
             toolsUsed.map((tool, index) => {
               return (
                 <img src={tool.icon} alt={tool.name} title={tool.name} key={index} className='cursor-pointer w-11 hover:translate-y-[-5px] duration-400' />
-                
               )
             })
           }
