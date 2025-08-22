@@ -81,7 +81,7 @@ const AboutMe = () => {
                         return (
                           <div className='flex flex-col justify-center items-center gap-2 cursor-pointer hover:translate-y-[-5px] transition-all duration-500' key={index}>
                             <img src={language.icon} alt={language.name} className='w-15' />
-                            <label htmlFor="">{language.name}</label>
+                            <label >{language.name}</label>
                           </div>
                         )
                       })

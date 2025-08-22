@@ -8,7 +8,6 @@ import AllProjects from './Pages/AllProjects'
 import Contact from './Pages/Contact'
 import { ToastContainer } from 'react-toastify';
 
-
 const App = () => {
   const router = createBrowserRouter(createRoutesFromElements(
     // Main layout with Navbar
@@ -28,6 +27,7 @@ const App = () => {
 
   return (
     <>
+     
       <ToastContainer />
       <RouterProvider router={router} />
     </>
