@@ -21,8 +21,8 @@ const Hero = () => {
 
   
   return (
-    <div id="hero" className='px-[5%] sm:px-[10%] py-0 sm:py-[30px]'>
-      <div className='flex justify-between items-center py-0 sm:py-15'>
+    <section id="hero" className='w-full relative px-[5%] mt-[-50px] sm:mt-0 sm:pt-[50px] '>
+      <div className='max-w-[1520px] mx-auto flex justify-between items-center  py-15'>
         <div className='w-full sm:w-1/2 flex flex-col items-center sm:items-start text-center sm:text-left' data-aos="fade-right" data-aos-duration="1500">
           <h2 className='text-[2.5rem]  lg:text-[3.5rem] font-bold'>Hi!,</h2>
           <h1 className='text-[2.5rem]  lg:text-[3.5rem] font-bold'>I'm <span className='text-[2.5rem]  lg:text-[3.5rem] font-extrabold bg-gradient-to-r from-[#0639a7] to-[#15b5ff] bg-clip-text text-transparent'>CHARLES LENNARD C. AMON</span></h1>
@@ -56,7 +56,7 @@ const Hero = () => {
           <img src={charles} alt="Chales" className='w-110  rounded-4xl object-scale-down '/>
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 

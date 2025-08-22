@@ -23,7 +23,7 @@ const ProjModal = ({open, onClose, projectId}) => {
     <>
     {/* OVERLAY */}
     <div className='px-[5%] fixed top-0 bottom-0 left-0 right-0 bg-[rgba(0,0,0,.5)] z-50'>
-      <div className='max-w-[1300px] my-[1.5rem] mx-auto'>
+      <div className='max-w-[1300px] my-[1.5rem] mx-auto mt-20'>
         {/* Modal Content */}
         <div className='flex flex-col'>
           {/* Modal Header */}
@@ -73,7 +73,7 @@ const ProjModal = ({open, onClose, projectId}) => {
                 </div>
                 
                 <div className='flex gap-1 justify-center'>
-                  <FontAwesomeIcon onClick={()=>setSlides(slides === 0? project.details.length -1 : slides-1)} icon={faCircleLeft}  className='text-[30px] cursor-pointer'/>
+                  <FontAwesomeIcon onClick={()=>setSlides(slides === 0? project.details.length -1 : slides-1)} icon={faCircleLeft}  className='hover:text-gray-300 text-[30px] cursor-pointer'/>
                   <span className='flex gap-1 justify-center items-center'>
                     {
                       project.details.map((_,index) => {
@@ -83,7 +83,7 @@ const ProjModal = ({open, onClose, projectId}) => {
                       })
                     }
                   </span>
-                  <FontAwesomeIcon onClick={()=>setSlides(slides === project.details.length - 1 ? 0 : slides+1)} icon={faCircleRight} className='text-[30px]  cursor-pointer'/>
+                  <FontAwesomeIcon onClick={()=>setSlides(slides === project.details.length - 1 ? 0 : slides+1)} icon={faCircleRight} className='hover:text-gray-300 text-[30px] cursor-pointer'/>
                 </div>
                 
                 

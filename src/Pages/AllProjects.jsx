@@ -13,8 +13,9 @@ const AllProjects = () => {
          {projects.map((project, index) => {
           return(
             <ProjectCards 
+              id={project.id} 
               title={project.title} 
-              image={project.image}
+              details={project.details[0]}
               description={project.description}
               toolsUsed={project.toolsUsed}
               liveView={project.liveView}
