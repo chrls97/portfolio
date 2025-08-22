@@ -7,8 +7,6 @@ import RouteLayout from './layout/RouteLayout'
 import AllProjects from './Pages/AllProjects'
 import Contact from './Pages/Contact'
 import { ToastContainer } from 'react-toastify';
-import ProjModal from './Components/Modals/ProjModal'
-
 
 const App = () => {
   const router = createBrowserRouter(createRoutesFromElements(
@@ -29,6 +27,7 @@ const App = () => {
 
   return (
     <>
+     
       <ToastContainer />
       <RouterProvider router={router} />
     </>

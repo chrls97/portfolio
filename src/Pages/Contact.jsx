@@ -95,9 +95,7 @@ const Contact = () => {
             
 
         </div>
-
-
-
+    
         <hr className='border-[0.5px] border-gray-500  h-auto'/>
         <div className="w-full sm:w-1/2"  data-aos="fade-up" data-aos-duration="1500">
           <form onSubmit={sendEmail} className='flex flex-col gap-2'>

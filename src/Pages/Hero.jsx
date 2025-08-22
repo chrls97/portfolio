@@ -52,7 +52,7 @@ const Hero = () => {
           
           
         </div>
-        <div className='hidden sm:block sm:w-4/12' data-aos="fade-left" data-aos-duration="1500">
+        <div className='hidden sm:block sm:w-4/12 xl:w-auto' data-aos="fade-left" data-aos-duration="1500">
           <img src={charles} alt="Chales" className='w-110  rounded-4xl object-scale-down '/>
         </div>
       </div>

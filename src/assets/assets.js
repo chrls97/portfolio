@@ -54,124 +54,145 @@ export const techStacks = [
   {
     stack: 'frontend',
     languages: [
-      { name: 'HTML', icon: assets.html},
-      { name: 'CSS', icon: assets.css},
-      { name: 'JavaScript', icon: assets.js},
-      { name: 'React', icon: assets.react},
-      { name: 'Bootstrap', icon: assets.bootstrap},
-      { name: 'Tailwind', icon: assets.tailwind}
+      { name: 'HTML', icon: assets.html },
+      { name: 'CSS', icon: assets.css },
+      { name: 'JavaScript', icon: assets.js },
+      { name: 'React', icon: assets.react },
+      { name: 'Bootstrap', icon: assets.bootstrap },
+      { name: 'Tailwind', icon: assets.tailwind }
     ]
-  },{
+  }, {
     stack: 'backend',
     languages: [
-      { name: 'PHP', icon: assets.php},
-      { name: 'Laravel', icon: assets.laravel},
-      { name: 'NodeJs', icon: assets.nodejs},
-      { name: 'ExpressJs', icon: assets.expressjs},
-      { name: 'mySql', icon: assets.mysql},
-      { name: 'MongoDB', icon: assets.mongodb}
+      { name: 'PHP', icon: assets.php },
+      { name: 'Laravel', icon: assets.laravel },
+      { name: 'NodeJs', icon: assets.nodejs },
+      { name: 'ExpressJs', icon: assets.expressjs },
+      { name: 'mySql', icon: assets.mysql },
+      { name: 'MongoDB', icon: assets.mongodb }
     ]
-  },{
+  }, {
     stack: 'tools',
     languages: [
-      { name: 'VS Code', icon: assets.vscode},
-      { name: 'Git', icon: assets.git},
-      { name: 'Github', icon: assets.github},
-      { name: 'Postman', icon: assets.postman},
-      { name: 'NPM', icon: assets.npm},
-      { name: 'Photoshop', icon: assets.photoshop}
+      { name: 'VS Code', icon: assets.vscode },
+      { name: 'Git', icon: assets.git },
+      { name: 'Github', icon: assets.github },
+      { name: 'Postman', icon: assets.postman },
+      { name: 'NPM', icon: assets.npm },
+      { name: 'Photoshop', icon: assets.photoshop }
     ]
   }
 ];
 
 export const projects = [{
-    title: 'iSolutions Operations System',
-    description: 'Designed and developed a comprehensive ERP system to streamline business operations across multiple departments, including Sales, Purchasing, Accounting, Marketing, and Technical Services. The system features an intuitive dashboard, real-time reporting, and role-based access control, enhancing productivity, data accuracy, and decision-making.',
-    image: isii_ops,
-    toolsUsed: [{name:'HTML', icon:html},
-      {name:'CSS', icon:css},
-      {name:'JS', icon:js},
-      {name:'Bootstrap', icon:bootstrap},
-      {name:'PHP', icon:php},
-      {name:'MYSQL', icon:mysql}],
-    liveView: false,
-    liveViewLink: '#',
-    github: false,
-    githubLink: '#',
-    gallery:true
-  },{
-    title: 'iSolutions International Inc. Website',
-    description: 'iSolutions International Inc. presents a dynamic and responsive website designed to showcase comprehensive company information, services, solutions, and products. The platform ensures seamless accessibility across all devices, delivering an optimal user experience for clients and stakeholders.',
-    image: isii,
-    toolsUsed: [{name:'HTML', icon:html},
-      {name:'CSS', icon:css},
-      {name:'JS', icon:js},
-      {name:'Bootstrap', icon:bootstrap},
-      {name:'PHP', icon:php},
-      {name:'MYSQL', icon:mysql}],
-    liveView: true,
-    liveViewLink: 'http://www.isolutions.com.ph/',
-    github: false,
-    githubLink: '#',
-    gallery:false
-  },{
-    title: 'United Portusers Confederation Website',
-    description: 'Developed a fully responsive website for the United Portusers Confederation of the Philippines, Inc. to enhance digital presence and improve member engagement. The platform features a custom Content Management System for real-time updates on news, events, and member listings, while effectively showcasing the organization’s mission, structure, and membership application process.',
-    image: upc,
-    toolsUsed: [{name:'HTML', icon:html},
-      {name:'CSS', icon:css},
-      {name:'JS', icon:js},
-      {name:'Bootstrap', icon:bootstrap},
-      {name:'PHP', icon:php},
-      {name:'MYSQL', icon:mysql}],
-    liveView: true,
-    liveViewLink: 'https://www.upc-philippines.org/',
-    github: false,
-    githubLink: '#',
-    gallery:false
-  },{
-    title: 'MIS Operations System',
-    description: 'Lorem ipsum does, maxime sint nihil exercitationem eum! Eius, beatae!',
-    image: misOperations,
-    toolsUsed: [{name:'HTML', icon:html},
-      {name:'CSS', icon:css},
-      {name:'JS', icon:js},
-      {name:'Bootstrap', icon:bootstrap},
-      {name:'PHP', icon:php},
-      {name:'MYSQL', icon:mysql}],
-    liveView: true,
-    liveViewLink: 'http://www.cargosoft.com.ph/mis-operations/',
-    github: false,
-    githubLink: '#',
-    gallery:false
-  },{
-    title: 'Cargosoft Launcher System',
-    description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta ad commodi voluptates harum eos delectus, molestias totam possimus suscipit doloribus nisi labore maiores, maxime sint nihil exercitationem eum! Eius, beatae!',
-    image: cslauncher,
-    toolsUsed: [{name:'HTML', icon:html},
-      {name:'CSS', icon:css},
-      {name:'JS', icon:js},
-      {name:'Bootstrap', icon:bootstrap},
-      {name:'PHP', icon:php},
-      {name:'MYSQL', icon:mysql}],
-    liveView: true,
-    liveViewLink: 'http://www.cargosoft.com.ph/cargosoft-launcher/',
-    github: false,
-    githubLink: '#',
-    gallery:false
-  },{
-    title: 'Eagle Express Lines Website',
-    description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta ad commodi voluptates harum eos delectus, molestias totam possimus suscipit doloribus nisi labore maiores, maxime sint nihil exercitationem eum! Eius, beatae!',
-    image: eeg,
-    toolsUsed: [{name:'HTML', icon:html},
-      {name:'CSS', icon:css},
-      {name:'JS', icon:js},
-      {name:'Bootstrap', icon:bootstrap},
-      {name:'PHP', icon:php},
-      {name:'MYSQL', icon:mysql}],
-    liveView: true,
-    liveViewLink: 'http://www.eaglegroup.com.ph/',
-    github: false,
-    githubLink: '#',
-    gallery:false
-  }]
+  id: 1,
+  title: 'iSolutions Operations System',
+  description: 'Designed and developed a comprehensive ERP system to streamline business operations across multiple departments, including Sales, Purchasing, Accounting, Marketing, and Technical Services. The system features an intuitive dashboard, real-time reporting, and role-based access control, enhancing productivity, data accuracy, and decision-making.',
+  details: [
+    { image: isii_ops, description: "ISII Ops" },
+    { image: isii, description: "ISII Website" },
+    { image: upc, description: "UPC" },
+    { image: misOperations, description: "MIS OPS" },
+    { image: upc, description: "UPC" },
+    { image: upc, description: "UPC" },
+    { image: upc, description: "UPC" }
+    
+  ],
+  toolsUsed: [
+    { name: 'HTML', icon: html },
+    { name: 'CSS', icon: css },
+    { name: 'JS', icon: js },
+    { name: 'Bootstrap', icon: bootstrap },
+    { name: 'PHP', icon: php },
+    { name: 'MYSQL', icon: mysql }],
+  liveView: false,
+  liveViewLink: '#',
+  github: false,
+  githubLink: '#',
+  gallery: true
+}, {
+  id: 2,
+  title: 'iSolutions International Inc. Website',
+  description: 'iSolutions International Inc. presents a dynamic and responsive website designed to showcase comprehensive company information, services, solutions, and products. The platform ensures seamless accessibility across all devices, delivering an optimal user experience for clients and stakeholders.',
+  details: [{ image: isii, description: "ISII Website" }],
+  toolsUsed: [
+    { name: 'HTML', icon: html },
+    { name: 'CSS', icon: css },
+    { name: 'JS', icon: js },
+    { name: 'Bootstrap', icon: bootstrap },
+    { name: 'PHP', icon: php },
+    { name: 'MYSQL', icon: mysql }],
+  liveView: true,
+  liveViewLink: 'http://www.isolutions.com.ph/',
+  github: false,
+  githubLink: '#',
+  gallery: false
+}, {
+  id: 3,
+  title: 'United Portusers Confederation Website',
+  description: 'Developed a fully responsive website for the United Portusers Confederation of the Philippines, Inc. to enhance digital presence and improve member engagement. The platform features a custom Content Management System for real-time updates on news, events, and member listings, while effectively showcasing the organization’s mission, structure, and membership application process.',
+  details: [{ image: upc, description: "UPC" }],
+  toolsUsed: [
+    { name: 'HTML', icon: html },
+    { name: 'CSS', icon: css },
+    { name: 'JS', icon: js },
+    { name: 'Bootstrap', icon: bootstrap },
+    { name: 'PHP', icon: php },
+    { name: 'MYSQL', icon: mysql }],
+  liveView: true,
+  liveViewLink: 'https://www.upc-philippines.org/',
+  github: false,
+  githubLink: '#',
+  gallery: false
+}, {
+  id: 4,
+  title: 'MIS Operations System',
+  description: 'Lorem ipsum does, maxime sint nihil exercitationem eum! Eius, beatae!',
+  details: [{ image: misOperations, description: "MIS OPS" }],
+  toolsUsed: [
+    { name: 'HTML', icon: html },
+    { name: 'CSS', icon: css },
+    { name: 'JS', icon: js },
+    { name: 'Bootstrap', icon: bootstrap },
+    { name: 'PHP', icon: php },
+    { name: 'MYSQL', icon: mysql }],
+  liveView: true,
+  liveViewLink: 'http://www.cargosoft.com.ph/mis-operations/',
+  github: false,
+  githubLink: '#',
+  gallery: false
+}, {
+  id: 5,
+  title: 'Cargosoft Launcher System',
+  description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta ad commodi voluptates harum eos delectus, molestias totam possimus suscipit doloribus nisi labore maiores, maxime sint nihil exercitationem eum! Eius, beatae!',
+  details: [{ image: cslauncher, description: "EEG CIS" }],
+  toolsUsed: [
+    { name: 'HTML', icon: html },
+    { name: 'CSS', icon: css },
+    { name: 'JS', icon: js },
+    { name: 'Bootstrap', icon: bootstrap },
+    { name: 'PHP', icon: php },
+    { name: 'MYSQL', icon: mysql }],
+  liveView: true,
+  liveViewLink: 'http://www.cargosoft.com.ph/cargosoft-launcher/',
+  github: false,
+  githubLink: '#',
+  gallery: false
+}, {
+  id: 6,
+  title: 'Eagle Express Lines Website',
+  description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta ad commodi voluptates harum eos delectus, molestias totam possimus suscipit doloribus nisi labore maiores, maxime sint nihil exercitationem eum! Eius, beatae!',
+  details: [{ image: eeg, description: "Website" }],
+  toolsUsed: [
+    { name: 'HTML', icon: html },
+    { name: 'CSS', icon: css },
+    { name: 'JS', icon: js },
+    { name: 'Bootstrap', icon: bootstrap },
+    { name: 'PHP', icon: php },
+    { name: 'MYSQL', icon: mysql }],
+  liveView: true,
+  liveViewLink: 'http://www.eaglegroup.com.ph/',
+  github: false,
+  githubLink: '#',
+  gallery: false
+}]
