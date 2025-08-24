@@ -21,10 +21,14 @@ import photoshop from './stack_icons/photoshop.png'
 
 
 
+import misOperations from './system_ss/mis-ops/mis-operations.png'
+import misOperations1 from './system_ss/mis-ops/mis-ops1.png'
+
+
 import isii_ops from './system_ss/isii-ops.png'
 import isii from './system_ss/isi-website.png'
 import cslauncher from './system_ss/cslauncher.png'
-import misOperations from './system_ss/mis-operations.png'
+
 import upc from './system_ss/upc-website.png'
 import eeg from './system_ss/eeg-website.png'
 
@@ -147,8 +151,12 @@ export const projects = [{
 }, {
   id: 4,
   title: 'MIS Operations System',
-  description: 'Lorem ipsum does, maxime sint nihil exercitationem eum! Eius, beatae!',
-  details: [{ image: misOperations, description: "MIS OPS" }],
+  description: 'Develop initiative aims to digitally transform all MIS department operations by implementing a centralized system to automate reporting, billing, documentation, IT asset inventory, and IT and Office supply monitoring',
+  details: [
+    { image: misOperations, description: "Login" },
+    { image: misOperations1, description: "Menu Board" },
+    
+  ],
   toolsUsed: [
     { name: 'HTML', icon: html },
     { name: 'CSS', icon: css },
@@ -164,7 +172,7 @@ export const projects = [{
 }, {
   id: 5,
   title: 'Cargosoft Launcher System',
-  description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta ad commodi voluptates harum eos delectus, molestias totam possimus suscipit doloribus nisi labore maiores, maxime sint nihil exercitationem eum! Eius, beatae!',
+  description: 'Cargosoft Launcher system is a centralized logistics platform that integrates client information, cargo invoicing, official receipting, payment tracking, accounting, and automated report generation into a single, streamlined system',
   details: [{ image: cslauncher, description: "EEG CIS" }],
   toolsUsed: [
     { name: 'HTML', icon: html },
@@ -181,7 +189,7 @@ export const projects = [{
 }, {
   id: 6,
   title: 'Eagle Express Lines Website',
-  description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta ad commodi voluptates harum eos delectus, molestias totam possimus suscipit doloribus nisi labore maiores, maxime sint nihil exercitationem eum! Eius, beatae!',
+  description: 'Eagle Express Lines Website presents a dynamic and responsive website designed to showcase comprehensive company information, services, solutions in logistic industry. The platform ensures seamless accessibility across all devices, delivering an optimal user experience for clients and stakeholders',
   details: [{ image: eeg, description: "Website" }],
   toolsUsed: [
     { name: 'HTML', icon: html },
