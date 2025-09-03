@@ -69,22 +69,25 @@ const ProjModal = ({ open, onClose, projectId }) => {
                       })
                     }
                   </div>
-
-                  <div className='flex gap-1 justify-center'>
-                    <FontAwesomeIcon onClick={() => setSlides(slides === 0 ? project.details.length - 1 : slides - 1)} icon={faCircleLeft} className='hover:text-gray-300 text-[30px] cursor-pointer' />
-                    <span className='flex gap-1 justify-center items-center'>
-                      {
-                        project.details.map((_, index) => {
-                          return (
-                            <button key={index} onClick={() => setSlides(index)} className={`${slides === index ? 'bg-[#ffffff]' : 'bg-[#ffffff73]'} h-3 px-[6px]  ml-[4px] rounded-full cursor-pointer`}></button>
-                          )
-                        })
-                      }
-                    </span>
-                    <FontAwesomeIcon onClick={() => setSlides(slides === project.details.length - 1 ? 0 : slides + 1)} icon={faCircleRight} className='hover:text-gray-300 text-[30px] cursor-pointer' />
-                  </div>
-
-
+                  
+                  {
+                    project.details.length > 1 ? 
+                    <div className='flex gap-1 justify-center'>
+                      <FontAwesomeIcon onClick={() => setSlides(slides === 0 ? project.details.length - 1 : slides - 1)} icon={faCircleLeft} className='hover:text-gray-300 text-[30px] cursor-pointer' />
+                      <span className='flex gap-1 justify-center items-center'>
+                        {
+                          project.details.map((_, index) => {
+                            return (
+                              <button key={index} onClick={() => setSlides(index)} className={`${slides === index ? 'bg-[#ffffff]' : 'bg-[#ffffff73]'} h-3 px-[6px]  ml-[4px] rounded-full cursor-pointer`}></button>
+                            )
+                          })
+                        }
+                      </span>
+                      <FontAwesomeIcon onClick={() => setSlides(slides === project.details.length - 1 ? 0 : slides + 1)} icon={faCircleRight} className='hover:text-gray-300 text-[30px] cursor-pointer' />
+                    </div>
+                    : ''
+                  }
+                  
                 </div>
 
 
