@@ -21,7 +21,7 @@ const Projects = () => {
         
           <div className='flex flex-wrap gap-5 items-stretch justify-center '>
             {
-              projects.map((project, index) => {
+              projects.slice(0, 9).map((project, index) => {
                 return(
                   <ProjectCards 
                     id={project.id} 

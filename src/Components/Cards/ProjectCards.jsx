@@ -44,10 +44,10 @@ const ProjectCards = ({ id, details, title, description, toolsUsed, liveView, li
           }
         </div>
 
-        <div className='project-links'>
-          {liveView ? <a href={liveViewLink} target='_blank'><FontAwesomeIcon icon={faEye} /> View Live</a> : ''}
-          {github ? <a href={githubLink} target='_blank'><FontAwesomeIcon icon={faGithub} />&nbsp;&nbsp;Github</a> : ''}
-          {gallery ? <a href={githubLink} target='_blank'> <FontAwesomeIcon icon={faFolderOpen} />&nbsp;&nbsp;Gallery</a> : ''}
+        <div className='flex gap-3 items-center'>
+          {liveView ? <a href={liveViewLink} target='_blank' className='flex justify-center items-center gap-2 border-1 border-white rounded-full px-3 py-1 '><FontAwesomeIcon icon={faEye} /> View Live</a> : ''}
+          {github ? <a href={githubLink} target='_blank' className='flex justify-center items-center border-1 border-white rounded-full px-2 py-1 '><FontAwesomeIcon icon={faGithub} />&nbsp;&nbsp;Github</a> : ''}
+          {gallery ? <a onClick={()=> setIsOpen(!isOpen)}  className='flex justify-center items-center border-1 border-white rounded-full px-3 py-1 cursor-pointer'> <FontAwesomeIcon icon={faFolderOpen} />&nbsp;&nbsp;Gallery</a> : ''}
         </div>
       </div>
     </div>
